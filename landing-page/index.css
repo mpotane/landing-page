@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    background: linear-gradient(90deg, rgba(130,35,238,1) 0%, rgba(82,19,182,1) 35%, rgba(121,25,162,1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 5vw;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.navbar-branding {
+    color: white;
+    transform: scale(1.5);
+    text-decoration: none;
+}
+
+.brandstyle {
+    color: rgb(240, 49, 43);
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: .5rem;
+    background-image: linear-gradient(162deg, rgba(11,32,244,1) 0%, rgba(8,178,205,1) 35%, rgba(207,115,45,1) 100%);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: background-size 300ms ease;
+}
+
+.nav-link:hover {
+    background-size: 100% 3px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease-in-out;
+    color: white;
+}
+
+section {
+    min-height: 600px;
+}
+
+.hero {
+    background: rgb(130,35,238);
+    background: linear-gradient(90deg, rgba(130,35,238,1) 0%, rgba(82,19,182,1) 35%, rgba(121,25,162,1) 100%);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100vw;
+}
+
+.left-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: azure;
+    width: 50vw;
+    margin: 0 5vw;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.txt {
+    font-size: 48px;
+    color: #f9faf8;
+}
+
+.para {
+    letter-spacing: .1ch;
+    text-indent: 1ch;
+    color: #e5e7eb;
+    font-size: 18px;
+}
+
+.btn {
+    background-color: #3882f6;
+    border: 0;
+    border-radius: 10px;
+    padding: .5rem;
+    color: white;
+    margin-top: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.exclamation {
+    color: rgb(240, 49, 43);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.right-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.project-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+}
+
+.card-btn {
+   width: 100%;
+}
+
+.testimony {
+    background-color: grey;
+}
+
+.ftr {
+    background-color: #262626;
+    min-height: 15vh;
+}
+
+@media(max-width:768px) {
+    .hamburger{
+        display: flex;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: 0;
+        top: -100vh;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100vw;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        top: 50px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .txt {
+        margin-top: 50px;
+    }
+}
+
