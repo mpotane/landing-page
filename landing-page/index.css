@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
 * {
     margin: 0;
@@ -23,11 +23,11 @@ li {
 }
 
 .navbar {
-    min-height: 50px;
+    min-height: 4.375rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 1.25rem;
     margin: 0 5vw;
 }
 
@@ -35,13 +35,33 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 3.75rem;
+}
+
+.menuBtn {
+    width: 2rem;
+    height: 2rem;
+    animation-name: hamburger;
+    animation-iteration-count: infinite;
+    animation-delay: 400ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes hamburger {
+    from {
+        transform: rotateZ(320deg);
+    }
+
+    to {
+        transform: rotateZ(22deg);
+    }
 }
 
 .navbar-branding {
     color: white;
     transform: scale(1.5);
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .brandstyle {
@@ -53,14 +73,14 @@ li {
     text-decoration: none;
     padding: .5rem;
     background-image: linear-gradient(162deg, rgba(11,32,244,1) 0%, rgba(8,178,205,1) 35%, rgba(207,115,45,1) 100%);
-    background-size: 0% 3px;
+    background-size: 0% 0.188rem;
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: background-size 300ms ease;
 }
 
 .nav-link:hover {
-    background-size: 100% 3px;
+    background-size: 100% 0.188rem;
 }
 
 .hamburger {
@@ -70,16 +90,16 @@ li {
 
 .bar {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
+    width: 1.563rem;
+    height: 0.188rem;
+    margin: 0.313rem auto;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease-in-out;
     color: white;
 }
 
 section {
-    min-height: 600px;
+    min-height: 100vh;
 }
 
 .hero {
@@ -100,12 +120,11 @@ section {
     color: azure;
     width: 50vw;
     margin: 0 5vw;
-    padding: 0 20px;
-    text-align: justify;
+    padding: 0 1.25rem;
 }
 
 .txt {
-    font-size: 48px;
+    font-size: 3rem;
     color: #f9faf8;
 }
 
@@ -113,13 +132,13 @@ section {
     letter-spacing: .1ch;
     text-indent: 1ch;
     color: #e5e7eb;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .btn {
     background-color: #3882f6;
     border: 0;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     padding: .5rem;
     color: white;
     margin-top: .5rem;
@@ -139,34 +158,61 @@ section {
     justify-content: center;
     align-items: center;
     width: 50vw;
+    padding: 1.25rem 0;
+    
+}
+
+.right-hero img {
+    border-radius: 50%;
 }
 
 .projects {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+    padding: 1.875rem 0;
 }
 
 .project-heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
+    padding: 1.875rem 0;
 }
 
 .cards {
     background-color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    place-items: center;
+    gap: 3.75rem;
 }
 
-.card{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 5px;
+.card {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.card-btn {
-   width: 100%;
+.card__cover {
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card__content {
+    padding: 1.25rem;
+}
+
+.card__content p {
+    text-indent: 1ch;
+    height: 6.25rem;
+    width: 15.625rem;
+}
+
+.cardBtn {
+    width: 100%;
 }
 
 .testimony {
@@ -178,7 +224,7 @@ section {
     min-height: 15vh;
 }
 
-@media(max-width:768px) {
+@media(max-width:48rem) {
     .hamburger{
         display: flex;
     }
@@ -188,11 +234,11 @@ section {
     }
 
     .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(0.5rem) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-0.5rem) rotate(-45deg);
     }
 
     .nav-menu {
@@ -208,19 +254,80 @@ section {
     }
 
     .nav-item {
-        margin: 16px 0;
+        margin: 1rem 0;
     }
 
     .nav-menu.active {
-        top: 50px;
+        top: 4.375rem;
     }
 
     .hero {
         flex-direction: column;
+        gap: 3.75rem;
     }
 
     .txt {
-        margin-top: 50px;
+        margin-top: 4.375rem;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
     }
 }
 
+/* nav-icon-6 */
+.nav-icon-6{
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .nav-icon-6 span{
+    background-color:#fff;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+  }
+  .nav-icon-6 span:nth-child(1){
+    top:0px;
+    left: 0px;
+  }
+  .nav-icon-6 span:nth-child(2){
+    top:13px;
+    left: 0px;
+  }
+  .nav-icon-6 span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+  }
+  .nav-icon-6:not(.open):hover span:nth-child(1){
+    transform:  scaleY(1.2);
+    left: -5px;
+  }
+  .nav-icon-6:not(.open):hover span:nth-child(2){
+    transform: rotate(5deg) scaleY(1.1);
+  }
+  .nav-icon-6:not(.open):hover span:nth-child(3){
+    transform:  scaleY(1.2);
+    left: 5px;
+  }
+  .nav-icon-6.open span:nth-child(1){
+    transform: rotate(45deg) scaleX(0.7);
+    top: 13PX;
+    left: -8px;
+  }
+  .nav-icon-6.open span:nth-child(2){
+    transform: scale(0);
+    transition-duration: 50ms
+  }
+  .nav-icon-6.open span:nth-child(3){
+    transform: rotate(-45deg) scaleX(0.7);
+    top: 13PX;
+    left: 7px;
+  }
