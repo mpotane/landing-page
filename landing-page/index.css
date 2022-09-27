@@ -14,7 +14,7 @@ html {
 header {
     position: fixed;
     width: 100vw;
-    background: linear-gradient(90deg, rgba(130,35,238,1) 0%, rgba(82,19,182,1) 35%, rgba(121,25,162,1) 100%);
+    background: white;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
@@ -40,10 +40,11 @@ li {
 
 
 .navbar-branding {
-    color: white;
+    color: black;
     transform: scale(1.5);
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .brandstyle {
@@ -51,10 +52,11 @@ li {
 }
 
 .nav-link {
-    color: white;
+    color: black;
+    font-weight: 500;
     text-decoration: none;
     padding: .5rem;
-    background-image: linear-gradient(162deg, rgba(11,32,244,1) 0%, rgba(8,178,205,1) 35%, rgba(207,115,45,1) 100%);
+    background-image: linear-gradient(360deg, rgba(123,63,228,1) 0%, rgba(121,56,235,1) 50%, rgba(190,170,226,1) 100%);
     background-size: 0% 0.188rem;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -85,34 +87,31 @@ section {
 }
 
 .hero {
-    background: rgb(130,35,238);
-    background: linear-gradient(90deg, rgba(130,35,238,1) 0%, rgba(82,19,182,1) 35%, rgba(121,25,162,1) 100%);
     display: grid;
+    background: radial-gradient(66.32% 66.32% at 54.13% 113.95%,rgba(108,38,255,.2) 0,rgba(242,89,255,0) 100%),linear-gradient(211.99deg,rgba(65,157,241,.2) -4.17%,rgba(45,143,234,0) 68.7%),radial-gradient(100% 100% at 28.65% 0,rgba(109,0,255,.25) 0,rgba(250,247,254,0) 100%);
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     gap: 3.75rem;
 }
 
 .left-hero {
-    color: azure;
     width: 50vw;
     padding-left: 7rem;
 }
 
 .txt {
     font-size: 3rem;
-    color: #f9faf8;
+    font-weight: bold;
 }
 
 .para {
     letter-spacing: .1ch;
     text-indent: 1ch;
-    color: #e5e7eb;
     font-size: 1.125rem;
 }
 
 .btn {
-    background-color: #3882f6;
+    background-color: #7b3fe4;
     border: 0;
     border-radius: 0.625rem;
     padding: .5rem;
@@ -151,6 +150,8 @@ section {
     display: grid;
     place-items: center;
     padding: 1.875rem 0;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .cards {
@@ -189,12 +190,40 @@ section {
 }
 
 .testimony {
-    background-color: grey;
+    background: #7b3fe4;
+    display: grid;
+    place-items: center;
+}
+
+
+.fig {
+    border: 2px solid salmon;
+    border-radius: 0.625rem;
+    margin: 0 15rem;
+    padding: 4rem;
+    color: #ffffff;
+}
+
+blockquote {
+    text-indent: 1ch;
+    font-style: italic;
+    padding: 2rem;
+    font-size: 1.125rem;
+}
+
+figcaption {
+    text-align: end;
+    padding: 0 4rem;
+    font-size: 1.25rem;
+    font-style: italic;
 }
 
 .ftr {
     background-color: #262626;
     min-height: 15vh;
+    display: grid;
+    place-items: center;
+    color: rgb(229, 229, 229);
 }
 
 @media(max-width:75rem) {
@@ -220,10 +249,11 @@ section {
         top: -100vh;
         gap: 0;
         flex-direction: column;
-        background-color: #262626;
+        background-color: white;
         width: 100vw;
         text-align: center;
         transition: 0.3s;
+        border-top: 0.063rem solid rgb(207, 207, 207);
     }
 
     .nav-item {
@@ -231,7 +261,7 @@ section {
     }
 
     .nav-menu.active {
-        top: 4.375rem;
+        top: 4.313rem;
     }
 
     .hero {
@@ -261,11 +291,25 @@ section {
 
     #hero__img {
         width: 50%;
+        margin-bottom: 2.5rem;
     }
 
     .cards {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .fig {
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    blockquote {
+        font-size: unset;
+    }
+
+    figcaption {
+        font-size: unset;
     }
 }
 
@@ -279,7 +323,7 @@ section {
     display: inline-block;
   }
   .nav-icon-6 span{
-    background-color:#fff;
+    background-color: black;
     position: absolute;
     border-radius: 2px;
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
