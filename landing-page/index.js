@@ -8,6 +8,7 @@ icon.addEventListener('click', () => {
     icon.classList.toggle("open");
 });
 
+/* Setting the default background color to white and the default text color to black. */
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active")
     navMenu.classList.toggle("active")

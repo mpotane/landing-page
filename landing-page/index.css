@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
+/* Setting the margin, padding, box-sizing, and font-family for all elements. */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Setting the default background color to white and the default text color to black. */
 :root {
     --bg-color: white;
     --txt-color: black;
@@ -279,6 +281,7 @@ figcaption {
 
 /* This is a media query. It is saying that if the screen is less than 769px, then do the following. */
 @media only screen and (max-width:769px) {
+
     .hamburger{
         display: flex;
     }
@@ -421,10 +424,6 @@ figcaption {
 }
 
 @media only screen and (max-width:376px) {
-
-    .left-hero {
-        padding: 1rem;
-    }
 
     #hero__img {
         width: 250px;
