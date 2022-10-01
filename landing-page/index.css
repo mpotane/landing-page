@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Updock&display=swap');
 
 /* Setting the margin, padding, box-sizing, and font-family for all elements. */
 * {
@@ -33,6 +34,7 @@ header {
     width: 100vw;
     background-color: var(--bg-color);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    z-index: 2;
 }
 
 li {
@@ -109,6 +111,7 @@ section {
     min-height: 100vh;
 }
 
+/* Setting the background of the hero section to a gradient. */
 .hero {
     display: grid;
     background: radial-gradient(66.32% 66.32% at 54.13% 113.95%,rgba(108,38,255,.2) 0,rgba(242,89,255,0) 100%),linear-gradient(211.99deg,rgba(65,157,241,.2) -4.17%,rgba(45,143,234,0) 68.7%),radial-gradient(100% 100% at 28.65% 0,rgba(109,0,255,.25) 0,rgba(250,247,254,0) 100%);
@@ -160,8 +163,15 @@ section {
     transform: scale(1.1);
 }
 
-.exclamation {
+.txt::first-letter {
+    font-family: Updock;
+    font-size: 3.5rem;
     color: rgb(240, 49, 43);
+    padding-right: .5rem; 
+}
+
+.exclamation {
+    color: #7b3fe4;
 }
 
 .btn:hover {
@@ -206,10 +216,15 @@ section {
 
 .card {
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-bottom-right-radius: 1rem;
 }
 
 .card__cover {
     width: 100%;
+}
+
+.card__cover img {
+    border-top-left-radius: 1rem;
 }
 
 .card:hover {
@@ -219,6 +234,7 @@ section {
 .card__content {
     padding: 1.25rem;
     background-color: white;
+    border-bottom-right-radius: 1rem;
 }
 
 .card__content p {
@@ -244,17 +260,53 @@ section {
 
 .testimony {
     background: #7b3fe4;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.fig__container {
+    width: 100vw;
+}
+
+.testimony {
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    width: 300%;
+    transition: .6s;
+}
 
 .fig {
     border: 0.125rem solid salmon;
     border-radius: 0.625rem;
-    margin: 0 15rem;
+    margin: 0 15rem; 
     padding: 4rem;
     color: #ffffff;
+}
+
+.indicator {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.figBtn {
+    height: 15px;
+    width: 15px;
+    margin: 0 .5rem;
+    background-color: white;
+    border-radius: 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.active__indicator {
+    width: 45px;
+    background-color: salmon;
 }
 
 blockquote {
