@@ -1,2 +1,2 @@
 # landing-page
-landing-page for The Odin Project(incomplete)
+<p>landing-page for The Odin Project.</p>
