@@ -7,6 +7,7 @@
     <title>Landing page</title>
     <link rel="icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <!-- This is the header section of the page. It contains the navigation bar and the hamburger menu. -->
@@ -14,9 +15,9 @@
         <nav class="navbar">
             <a href="#" class="navbar-branding">Lo<span class="brandstyle">go</span></a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#1" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#2" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#3" class="nav-link">Testimony</a></li>
+                <li class="nav-item"><a href="#hero__section" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#project__section" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#testimonial__section" class="nav-link">Testimony</a></li>
                 <li class="nav-item">
                     <div class="mode__con">
                         <img class="lightswitch" src="assets/moon.svg" alt="moon icon">
@@ -27,6 +28,7 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
+            <!-- The hamburger menu icon. -->
                 <div class="icon nav-icon-6">
                     <span></span>   
                     <span></span>
@@ -38,8 +40,8 @@
 
     <!-- This is the main content of the page. -->
     <main>
-        <section class="hero" id="1">
-            <div class="left-hero">
+        <section class="hero" id="hero__section">
+            <article class="left-hero">
                 <h1 class="txt">Hello world<span class="exclamation">&#33;</span></h1>
                 <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque deleniti aliquam similique?</p>
                 <div class="soclinks">
@@ -51,12 +53,12 @@
                         <img src="assets/in.svg" alt="Twitter icon">
                     </a>
                 </div>
-            </div>
+            </article>
             <div class="right-hero">
                 <img id="hero__img" src="assets/undraw_developer_activity_re_39tg.svg" alt="right-hero">
             </div>
         </section>
-        <section class="projects" id="2">
+        <section class="projects" id="project__section">
             <h2 class="project-heading">Projects</h2>
             <div class="cards">
                 <div class="card">
@@ -91,38 +93,60 @@
                 </div>
             </div>
         </section>
-        <section class="testimony" id="3">
-            <div class="fig__container">
-                <div class="testimonial">
-                    <div class="slide">
-                        <figure class="fig fade">
-                            <blockquote><img src="assets/open.svg" alt="open quotation"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquam unde rerum atque obcaecati ipsum consectetur velit libero, officia tempore. <img src="assets/close.svg" alt="close quotation"></blockquote>
-                            <figcaption>~John Doe</figcaption>
-                        </figure>
-                        <figure class="fig fade">
-                            <blockquote><img src="assets/open.svg" alt="open quotation"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquam unde rerum atque obcaecati ipsum consectetur velit libero, officia tempore. <img src="assets/close.svg" alt="close quotation"></blockquote>
-                            <figcaption>~John Doe</figcaption>
-                        </figure>
-                        <figure class="fig fade">
-                            <blockquote><img src="assets/open.svg" alt="open quotation"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquam unde rerum atque obcaecati ipsum consectetur velit libero, officia tempore. <img src="assets/close.svg" alt="close quotation"></blockquote>
-                            <figcaption>~John Doe</figcaption>
-                        </figure>
-                    </div>
+        <section class="testimony" id="testimonial__section">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="fig">
+                        <blockquote><img src="assets/open.svg" alt="open quotation"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquam unde rerum atque obcaecati ipsum consectetur velit libero, officia tempore. <img src="assets/close.svg" alt="close quotation"></blockquote>
+                        <figcaption>~John Doe</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="fig">
+                        <blockquote><img src="assets/open.svg" alt="open quotation"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquam unde rerum atque obcaecati ipsum consectetur velit libero, officia tempore. <img src="assets/close.svg" alt="close quotation"></blockquote>
+                        <figcaption>~John Doe</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="fig">
+                        <blockquote><img src="assets/open.svg" alt="open quotation"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquam unde rerum atque obcaecati ipsum consectetur velit libero, officia tempore. <img src="assets/close.svg" alt="close quotation"></blockquote>
+                        <figcaption>~John Doe</figcaption>
+                    </figure>
+                  </div>
                 </div>
-                <div class="indicator">
-                    <span class="figBtn active__indicator"></span>
-                    <span class="figBtn"></span>
-                    <span class="figBtn"></span>
-                </div>
+                <div class="indicator swiper-pagination"></div>
             </div>
             
         </section>
     </main>
 
-<!-- This is the footer section of the page. It contains the copyright information. -->
+    <!-- This is the footer section of the page. It contains the copyright information. -->
     <footer class="ftr">
         <div>Made with ❤️ by @mpotane</div>
     </footer>
+
+    <!-- main javascript -->
     <script src="index.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+    
 </body>
 </html>
